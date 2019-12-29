@@ -18,6 +18,7 @@ You should create a file named **.env** and add lines below
     AWS_SECRET_ACCESS_KEY=<AWS SECRET>
     
 and...
+
     python manage.py makemigrations
     python manage.py migrate
     python manage.py runserver
