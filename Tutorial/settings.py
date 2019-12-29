@@ -127,13 +127,12 @@ environ.Env.read_env(env_file=os.path.join(BASE_DIR, ".env"))
 #####AWS Configuration start
 AWS_ACCESS_KEY_ID = env("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY = env("AWS_SECRET_ACCESS_KEY")
-AWS_STORAGE_BUCKET_NAME = 'journior'
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.eu-central-1.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_STORAGE_BUCKET_NAME = 'bucket'
+AWS_REGION = 'region'
+AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.{AWS_REGION}.amazonaws.com'
 AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400',
 }
-AWS_LOCATION = 'static'
-AWS_REGION = 'eu-central-1'
 
 #Video properties
 VIDEO_ALLOWED_EXTENSIONS = ['mp4', 'mov']
